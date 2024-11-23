@@ -37,8 +37,9 @@ def predict_view(request):
     if surface_area is not None:
         try:
             surface_area = float(surface_area)
-            predicted_price = predict_price(surface_area)
-            return JsonResponse({'predicted_price': predicted_price})
+            predicted_price1 = predict_price(surface_area)
+            print(predicted_price1)
+            return JsonResponse({'predicted_price': predicted_price1})
         except ValueError:
             return JsonResponse({'error': 'Invalid surface area. Please enter a valid number.'}, status=400)
     else:

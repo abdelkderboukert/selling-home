@@ -36,7 +36,7 @@ export default function Home() {
             required
           />
         </label>
-        <button type="submit">Predict Price</button>
+        <button type="submit" > Predict Price</button>
       </form>
       {predictedPrice && <h2>Predicted Price: {predictedPrice}</h2>}
       {error && <h2 style={{ color: 'red' }}>Error: {error}</h2>}
